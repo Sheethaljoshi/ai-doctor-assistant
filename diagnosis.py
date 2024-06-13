@@ -23,7 +23,7 @@ def return_answer(question):
     run = client.beta.threads.runs.create_and_poll(
         thread_id=thread.id,
         assistant_id=assistant.id,
-        instructions="You are a healthcare professional assisting a doctor in making a diagnosis. You are given a list of symptoms being" + question + "and a file containing medical knowledge on cardiology. Your job is to assist the doctor in making diagnoses by providing 6 detailed probable diagnoses and how they correlate to the symptoms",
+        instructions="You are a healthcare professional assisting a doctor in making a diagnosis. You are given a list of symptoms being" + question + "and a file containing medical knowledge on cardiology. Your job is to assist the doctor in making diagnoses by providing 5 detailed probable diagnoses and how they correlate to the symptoms",
     )
 
     if run.status == 'completed':
